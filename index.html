@@ -3,239 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cantinho dos Bolos - Receitas Deliciosas</title>
-    <style>
-        /* Configurações Gerais */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #fcf8f2;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: #ffb3c1;
-            color: #fff;
-            text-align: center;
-            padding: 2.5rem 1rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            color: #654321;
-        }
-
-        header p {
-            font-size: 1.1rem;
-            color: #7d5a50;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        /* Grade de Bolos */
-        .grid-bolos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        /* Cartão de cada Bolo */
-        .card-bolo {
-            background: #fff;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
-            transition: transform 0.3s ease;
-        }
-
-        .card-bolo:hover {
-            transform: translateY(-5px);
-        }
-
-        .card-bolo img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-        }
-
-        .conteudo-bolo {
-            padding: 1.5rem;
-        }
-
-        .conteudo-bolo h2 {
-            color: #bd574e;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-            border-bottom: 2px solid #ffe5ec;
-            padding-bottom: 0.5rem;
-        }
-
-        .secao-receita {
-            margin-bottom: 1rem;
-        }
-
-        .secao-receita h3 {
-            font-size: 1rem;
-            color: #654321;
-            margin-bottom: 0.3rem;
-        }
-
-        .secao-receita ul, .secao-receita ol {
-            padding-left: 1.2rem;
-            font-size: 0.95rem;
-            color: #555;
-        }
-
-        .secao-receita li {
-            margin-bottom: 0.2rem;
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background-color: #654321;
-            color: #fff;
-            margin-top: 3rem;
-            font-size: 0.9rem;
-        }
-    </style>
+    <title>Doces Momentos - Confeitaria</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>🎂 Cantinho dos Bolos</h1>
-        <p>As melhores e mais simples receitas para adoçar o seu dia</p>
+        <h1>🎂 Doces Momentos</h1>
+        <!-- Botão de alternar tema -->
+        <button id="theme-toggle" class="btn-theme">🌓 Alterar Tema</button>
     </header>
 
-    <div class="container">
+    <main class="container">
+        <h2>Nossos Bolos Especiais</h2>
         <div class="grid-bolos">
-
-            <!-- BOLO 1 -->
+            
+            <!-- Bolo 1 -->
             <div class="card-bolo">
                 <img src="https://unsplash.com" alt="Bolo de Chocolate">
-                <div class="conteudo-bolo">
-                    <h2>1. Bolo de Chocolate Supremo</h2>
-                    <div class="secao-receita">
-                        <h3>Ingredientes:</h3>
-                        <ul>
-                            <li>3 ovos</li>
-                            <li>1 xícara de açúcar</li>
-                            <li>1 xícara de achocolatado</li>
-                            <li>2 xícaras de farinha de trigo</li>
-                            <li>1 xícara de água morna</li>
-                            <li>1 colher (sopa) de fermento</li>
-                        </ul>
-                    </div>
-                    <div class="secao-receita">
-                        <h3>Modo de Preparo:</h3>
-                        <ol>
-                            <li>Bata os ovos com o açúcar até espumar.</li>
-                            <li>Adicione o achocolatado e a farinha alternando com a água.</li>
-                            <li>Misture o fermento e asse por 40 minutos a 180°C.</li>
-                        </ol>
-                    </div>
-                </div>
+                <h3>Bolo de Chocolate Supremo</h3>
+                <p>Massa fofinha de cacau com uma cobertura cremosa de brigadeiro gourmet de dar água na boca.</p>
+                <button class="btn-pedir">Quero Esse!</button>
             </div>
 
-            <!-- BOLO 2 -->
-            <div class="card-bolo">
-                <img src="https://unsplash.com" alt="Bolo de Cenoura com Chocolate">
-                <div class="conteudo-bolo">
-                    <h2>2. Bolo de Cenoura</h2>
-                    <div class="secao-receita">
-                        <h3>Ingredientes:</h3>
-                        <ul>
-                            <li>3 cenouras médias raladas</li>
-                            <li>4 ovos</li>
-                            <li>1/2 xícara de óleo</li>
-                            <li>2 xícaras de açúcar</li>
-                            <li>2 xícaras de farinha de trigo</li>
-                            <li>1 colher (sopa) de fermento</li>
-                        </ul>
-                    </div>
-                    <div class="secao-receita">
-                        <h3>Modo de Preparo:</h3>
-                        <ol>
-                            <li>Bata no liquidificador a cenoura, ovos e óleo.</li>
-                            <li>Despeje em uma tigela e misture o açúcar e a farinha.</li>
-                            <li>Adicione o fermento e asse por 35 minutos.</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-
-            <!-- BOLO 3 -->
+            <!-- Bolo 2 -->
             <div class="card-bolo">
                 <img src="https://unsplash.com" alt="Bolo de Morango">
-                <div class="conteudo-bolo">
-                    <h2>3. Bolo de Morango Fresco</h2>
-                    <div class="secao-receita">
-                        <h3>Ingredientes:</h3>
-                        <ul>
-                            <li>4 ovos</li>
-                            <li>2 xícaras de açúcar</li>
-                            <li>1 xícara de leite integral</li>
-                            <li>2 xícaras de farinha de trigo</li>
-                            <li>1 caixa de morangos picados</li>
-                            <li>1 colher (sopa) de fermento</li>
-                        </ul>
-                    </div>
-                    <div class="secao-receita">
-                        <h3>Modo de Preparo:</h3>
-                        <ol>
-                            <li>Prepare uma massa de bolo branca simples batendo os ingredientes.</li>
-                            <li>Misture metade dos morangos delicadamente na massa.</li>
-                            <li>Asse e use o restante dos morangos para decorar por cima.</li>
-                        </ol>
-                    </div>
-                </div>
+                <h3>Sensação de Morango</h3>
+                <p>Camadas de pão de ló recheadas com chantilly fresco e pedaços dos melhores morangos selecionados.</p>
+                <button class="btn-pedir">Quero Esse!</button>
             </div>
 
-            <!-- BOLO 4 -->
+            <!-- Bolo 3 -->
+            <div class="card-bolo">
+                <img src="https://unsplash.com" alt="Bolo de Cenoura">
+                <h3>Bolo de Cenoura Clássico</h3>
+                <p>Aquele bolo com gosto de infância, coberto com uma casquinha crocante de chocolate.</p>
+                <button class="btn-pedir">Quero Esse!</button>
+            </div>
+
+            <!-- Bolo 4 -->
+            <div class="card-bolo">
+                <img src="https://unsplash.com" alt="Red Velvet">
+                <h3>Red Velvet Premium</h3>
+                <p>Massa aveludada de cor vermelha marcante com recheio leve e suave à base de cream cheese.</p>
+                <button class="btn-pedir">Quero Esse!</button>
+            </div>
+
+            <!-- Bolo 5 -->
             <div class="card-bolo">
                 <img src="https://unsplash.com" alt="Bolo de Limão">
-                <div class="conteudo-bolo">
-                    <h2>4. Bolo de Limão Fofinho</h2>
-                    <div class="secao-receita">
-                        <h3>Ingredientes:</h3>
-                        <ul>
-                            <li>3 ovos</li>
-                            <li>2 xícaras de açúcar</li>
-                            <li>3 colheres de manteiga</li>
-                            <li>Suco de 2 limões</li>
-                            <li>2 xícaras de farinha de trigo</li>
-                            <li>1 colher (sopa) de fermento</li>
-                        </ul>
-                    </div>
-                    <div class="secao-receita">
-                        <h3>Modo de Preparo:</h3>
-                        <ol>
-                            <li>Bata o açúcar, ovos e manteiga. Adicione o suco de limão.</li>
-                            <li>Incorpore a farinha aos poucos e por fim o fermento.</li>
-                            <li>Asse até dourar e cubra com raspas de limão.</li>
-                        </ol>
-                    </div>
-                </div>
+                <h3>Limão Siciliano Fresh</h3>
+                <p>A combinação perfeita entre o doce e o cítrico, finalizado com raspas frescas de limão.</p>
+                <button class="btn-pedir">Quero Esse!</button>
             </div>
 
         </div>
-    </div>
+    </main>
 
     <footer>
-        <p>&copy; 2026 Cantinho dos Bolos - Feito com ❤️ e açúcar</p>
+        <p>&copy; 2026 Doces Momentos. Todos os direitos reservados.</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
