@@ -1,25 +1,25 @@
-// 1. Funcionalidade de Alternar Tema (Claro / Escuro)
-const themeToggleBtn = document.getElementById('theme-toggle');
+// Garante que o código só vai rodar quando toda a página estiver carregada
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // 1. Botão de Alternar Tema
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    }
 
-themeToggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-});
-
-
-// 2. Funcionalidade dos Botões "Quero Esse!"
-// Seleciona todos os botões de pedido da página
-const botoesPedir = document.querySelectorAll('.btn-pedir');
-
-// Adiciona o evento de clique em cada um deles
-botoesPedir.forEach((botao) => {
-    botao.addEventListener('click', (evento) => {
-        // Encontra o card do bolo onde o botão foi clicado
-        const cardBolo = evento.target.closest('.card-bolo');
-        
-        // Pega o nome do bolo dentro daquele card (o texto do h3)
-        const nomeDoBolo = cardBolo.querySelector('h3').textContent;
-        
-        // Exibe uma mensagem na tela para o usuário
-        alert(`🎂 Ótima escolha! O bolo "${nomeDoBolo}" foi adicionado ao seu carrinho.`);
+    // 2. Botões "Quero Esse!"
+    const botoesPedir = document.querySelectorAll('.btn-pedir');
+    
+    botoesPedir.forEach((botao) => {
+        botao.addEventListener('click', (evento) => {
+            // Caminho direto para pegar o título do bolo
+            const cardBolo = evento.target.parentElement;
+            const nomeDoBolo = cardBolo.querySelector('h3').textContent;
+            
+            alert(`🎂 Ótima escolha! O bolo "${nomeDoBolo}" foi adicionado ao seu carrinho.`);
+        });
     });
+
 });
